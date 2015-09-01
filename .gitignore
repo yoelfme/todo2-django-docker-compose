@@ -1,0 +1,5 @@
+# Python Files
+*.pyc
+
+# OSX Files
+.DS_Store
