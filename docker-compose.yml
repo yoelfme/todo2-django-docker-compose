@@ -7,6 +7,13 @@ web:
   volumes:
     - .:/code
   ports:
-    - 8000:8000
+    - "8000:8000"
   links:
-    - db
+    - db:db
+    - redis:redis
+
+redis:
+  restart: always
+  image: redis:latest
+  ports:
+    - "6379:6379"
